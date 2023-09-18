@@ -1,0 +1,13 @@
+<p style="color: green"><%= notice %></p>
+
+<div class="container">
+<h1>Posts</h1>
+    <a href="<%= new_post_path %>"> <button type="button" class="btn btn-primary">New Post</button></a> <br>
+      <% @posts.each do |post| %> <br>
+          <strong>Title: </strong><%= post.title %> <br>
+          <strong>Body: </strong><%= post.body %> <br>
+          <%= link_to 'View this post', post %>
+          <%= link_to 'Edit post', edit_post_path(post) %><br>
+      <% end %>
+</div>
+  
