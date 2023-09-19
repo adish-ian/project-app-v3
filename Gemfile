@@ -52,6 +52,9 @@ group :test do
   gem 'webdrivers'
 end
 
+gem 'devise'
+gem 'htmlbeautifier', '~> 1.4', '>= 1.4.2'
+gem 'jquery-rails'
 gem 'net-http', require: false
 gem 'net-imap', require: false
 gem 'net-protocol', require: false
