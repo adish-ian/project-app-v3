@@ -18,3 +18,10 @@
     <%= link_to 'Back' , posts_path %>
       <%= button_to 'Destroy' , @posts, method: :delete, data: { confirm: 'Are you sure?' } %>
 </div>
+
+<div class="container">
+  <%= render 'comments/form', post: @post %>
+  <% @comments.each do |comment| %>
+    <%= render 'comments/comment', post: @post, comment: comment %>
+  <% end %>
+</div>
